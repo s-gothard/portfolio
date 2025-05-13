@@ -102,7 +102,7 @@ Between 2022 and 2024, I worked as a co-chair and leader on the Electronic Data 
   - [Link to Committee Website](https://naccdata.org/nacc-collaborations/uds4-updates#collaborations)
 
 ## Publications
-I have published several works in academic journals and conferences. For a full list of my publications, please refer to the [publications list]().
+I have published several works in academic journals and conferences. For a full list of my publications, please refer to the [publications list](https://github.com/s-gothard/portfolio/blob/main/Publications/Publications.md).
 
 ## Contact
 Feel free to reach out if you have any questions or would like to discuss collaboration opportunities!
