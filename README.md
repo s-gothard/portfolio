@@ -72,7 +72,7 @@ Here are some of my R-based projects:
   [View Project]()
   
 - **Statistical Analysis**  
-  - National Alzheimer's Coordinating Center data analysis  
+  - National Alzheimer's Coordinating Center Data Analysis  
     [View Project]()  
   - Wildfire Predictive Spread Analysis  
     [View Project]() 
