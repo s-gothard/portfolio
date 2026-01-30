@@ -1,0 +1,26 @@
+# jupyter
+.ipynb_checkpoints/
+
+# generated corpora / scraped text
+*/logs/corpus/
+logs/corpus/
+*.xml
+
+# model artifacts
+*.pkl
+*.joblib
+
+# python junk
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# large assets
+*.mp4
+*.pptx
+
+# large processed datasets
+Time_Clusters_AD/*.csv

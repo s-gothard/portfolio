@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #2563eb; /* blue-600 */
+    --primary-hover: #1d4ed8; /* blue-700 */
+    --green-hover: #a7f3d0;   /* light green */
+    --green-active: #065f46;  /* dark green */
+    --background: #f9fafb;
+    --radius: 12px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 2em;
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 420px;
+}
+
+.title {
+    font-size: 1.75em;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+    color: #1f2937;
+    letter-spacing: 0.05em;
+}
+
+.query-heading {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #111827;
+}
+
+.query-label {
+    display: block;
+    font-size: 0.95em;
+    margin-bottom: 0.5em;
+    color: #6b7280;
+}
+
+.search-form input[type="text"] {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #d1d5db;
+    border-radius: var(--radius);
+    margin-bottom: 1.25em;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.search-form button {
+    width: 100%;
+    padding: 0.75em;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #86efac; /* light green */
+    color: #111827;
+}
+
+.search-form button:active {
+    background-color: var(--green-active);
+    color: white;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.9em;
+    margin-top: 1em;
+    display: none;
+}

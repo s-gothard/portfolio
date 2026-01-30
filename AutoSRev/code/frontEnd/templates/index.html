@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AutoSRev</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='frontEnd.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">AutoSRev <br> Document Retrieval</h1>
+
+            <form method="post" class="search-form">
+                <label for="query" class="query-label">Enter your search query</label>
+                <input type="text" id="query" name="query" placeholder="Search..." value="{{ query }}" required>
+                <button type="submit">Retrieve</button>
+                <p class="error-message" id="errorMsg"></p>
+            </form>
+        </div>
+
+        <script>
+        document.querySelector('.search-form').addEventListener('submit', function (e) {
+            const input = document.querySelector('input[name="query"]');
+            const wordCount = input.value.trim().split(/\s+/).length;
+            const errorMsg = document.getElementById("errorMsg");
+
+            if (wordCount > 5) {
+                e.preventDefault();
+                errorMsg.textContent = "Your query contains too many words. Please limit it to 5.";
+                errorMsg.style.display = "block";
+            } else {
+                errorMsg.style.display = "none";
+            }
+        });
+        </script>
+    </body>
+</html>
