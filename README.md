@@ -23,12 +23,9 @@ I am a national contributor to data standards and best practices, with an emphas
 **Languages**  
 Python, R, SQL
 
-**Libraries & Frameworks**
-*Python:*  
-pandas, numpy, scikit-learn, statsmodels, PyTorch, TensorFlow, Hugging Face Transformers, nltk, matplotlib, seaborn
-
-*R:*  
-tidyverse, Shiny, caret, glmnet, randomForest, gbm, rpart, MASS, car, boot, pROC, ROCR, mice, janitor, skimr, lubridate, knitr, broom, plotly, ggridges gganimate
+**Libraries & Frameworks**  
+- *Python:* pandas, numpy, scikit-learn, statsmodels, PyTorch, TensorFlow, Hugging Face Transformers, nltk, matplotlib, seaborn
+- *R:* tidyverse, Shiny, caret, glmnet, randomForest, gbm, rpart, MASS, car, boot, pROC, ROCR, mice, janitor, skimr, lubridate, knitr, broom, plotly, ggridges gganimate
 
 **Tools & Platforms**  
 AWS (SageMaker), Docker, Tableau, Anaconda  
