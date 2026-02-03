@@ -1,4 +1,4 @@
-# Sarah Gothard | Biostatistics, Data Science, and Research Modernization Portfolio	
+# Sarah Gothard | Analytics and Research Modernization Portfolio		
 
 I am a data analyst and systems builder specializing in the **modernization of healthcare and clinical research infrastructure**. My work focuses on designing and implementing end-to-end analytic systems that transform complex, high-frequency clinical, sensor, and survey data into automated reporting, scalable analytics, and operational visibility, improving research execution and decision-making at scale.
 
@@ -27,10 +27,10 @@ Python, R, SQL
 
 **Libraries & Frameworks**
 
-*Python*  
+*Python:*  
 pandas, numpy, scikit-learn, statsmodels, PyTorch, TensorFlow, Hugging Face Transformers, nltk, matplotlib, seaborn
 
-*R*  
+*R:*  
 tidyverse, Shiny, caret, glmnet, randomForest, gbm, rpart, MASS, car, boot, pROC, ROCR, mice, janitor, skimr, lubridate, knitr, broom, plotly, ggridges gganimate
 
 **Tools & Platforms**
