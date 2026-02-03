@@ -1,4 +1,5 @@
-# Welcome to My GitHub Portfolio
+# Sarah Gothard | Biostatistics, Data Science, and Research Modernization Portfolio	
+
 I am a data analyst and systems builder specializing in the **modernization of healthcare and clinical research infrastructure**. My work focuses on designing and implementing end-to-end analytic systems that transform complex, high-frequency clinical, sensor, and survey data into automated reporting, scalable analytics, and operational visibility, improving research execution and decision-making at scale.
 
 I bring a strong foundation in data management, biostatistics, and machine learning, with a Master’s degree in Data Science and a Graduate Certificate in Biostatistics. Across my work, I have contributed to population-level analyses informing study design and sample size estimation, authored and supported data management and modernization plans, and helped develop novel analytic frameworks for large, multi-site research organizations.
