@@ -11,14 +11,14 @@ Throughout my career, I have demonstrated my ability to collaborate cross-functi
 - [Project Highlights](#project-highlights)
   - [NACC Dashboards](#nacc-dashboards)
   - [Time Clusters (AD)](#time-clusters-ad)
-  - [AutoSRev](#autosrev)
-  - [Earthquake Radiation Project](#earthquake-radiation-project)
+  - [AutoSRev — Automated Systematic Review](#autosrev--automated-systematic-review)
+  - [Earthquake Radiation Analysis](#earthquake-radiation-analysis)
 - [Committee Work](#committee-work)
 - [Publications](#publications)
 - [Contact](#contact)
 
 ## Technologies
-I Have experience with following technologies:
+I have intermediate experience with following technologies:
 - **Python**
 - **R**
 - **SQL**
@@ -30,13 +30,7 @@ I Have experience with following technologies:
 
 ### [NACC Dashboards](nacc_dashboard/)
 
-I developed a suite of reproducible analytics dashboards designed to support intuitive, multi-level comparison across Alzheimer’s Disease Research Centers (ADRCs), while also enabling within-site and within-subject longitudinal analysis. These dashboards were built to be **easily re-run as new data become available**, supporting ongoing monitoring rather than one-off reporting.
-
-Key design principles:
-- enable **cross-site benchmarking** in a standardized framework
-- support **within-site comparisons** across time
-- summarize **subject-level longitudinal change**
-- ensure outputs can be **regenerated as data are refreshed**
+I developed a suite of reproducible analytics dashboards designed to support intuitive, multi-level comparison across Alzheimer’s Disease Research Centers (ADRCs), while also enabling within-site and within-subject longitudinal analysis. These dashboards were built to support ongoing monitoring rather than one-off reporting.
 
 **Selected dashboard outputs:**
 
@@ -61,25 +55,23 @@ A barbell plot for a selected site comparing subject-level baseline and most rec
 
 ### [Time Clusters (AD)](Time_Clusters_AD/)
 
-This project investigates **longitudinal patterns of cognitive progression in Alzheimer’s disease** using time-aware modeling rather than visit-level prediction. The primary goal was **exploratory discovery**: identifying latent cognitive states and transition dynamics directly from real-world longitudinal clinical data.
+This project investigates longitudinal patterns of cognitive progression in Alzheimer’s disease using time-aware modeling rather than visit-level prediction. The primary goal was exploratory discovery: identifying latent cognitive states and transition dynamics directly from real-world longitudinal clinical data.
 
 
-#### Data
-
-The analysis uses the **longitudinal National Alzheimer’s Coordinating Center (NACC) Uniform Data Set (UDS)**, a geographically diverse cohort spanning approximately **2005–2025**.
+**Data**
+The analysis uses the longitudinal National Alzheimer’s Coordinating Center (NACC) Uniform Data Set (UDS), a geographically diverse cohort spanning approximately 2005–2025.
 
 Key characteristics of the dataset include:
-- **54,000+ subjects** with repeated clinical visits  
-- An average of **~3.7 years of follow-up per subject**  
-- **1,000+ variables** capturing cognitive, functional, and clinical information  
-- **200,000+ total observations** across all visits  
-- Roughly **balanced representation of cognitively normal and impaired subjects**
+- 54,000+ subjects with repeated clinical visits  
+- An average of ~3.7 years of follow-up per subject  
+- 1,000+ variables capturing cognitive, functional, and clinical information  
+- 200,000+ total observations across all visits  
+- Roughly balanced representation of cognitively normal and impaired subjects
 
 Diagnostic states were binned into clinically meaningful categories to support downstream modeling. In this phase, the focus is on **latent structure discovery**, not prediction.
 
 
-#### Processing Pipeline
-
+**Processing Pipeline**
 A substantial preprocessing pipeline was developed to prepare the data for longitudinal sequence modeling, including:
 - cleaning of placeholder values and invalid entries  
 - handling of longitudinal missingness patterns  
@@ -91,18 +83,17 @@ The emphasis was on producing a **clean, temporally consistent representation** 
 ![Longitudinal processing pipeline](Time_Clusters_AD/figs/processing_pipeline.png)
 
 
-#### Latent State Exploration with Hidden Markov Models
-
+**Latent State Exploration with Hidden Markov Models**
 An unsupervised **Hidden Markov Model (HMM)** was used to infer latent cognitive states underlying observed clinical measures. The objective was not classification accuracy, but **structure discovery**: uncovering progression stages and transition behavior implicit in longitudinal data.
 
 Exploration supported a **four-state latent structure**, with each state exhibiting distinct emission profiles and temporal dynamics.
 
-**Emission patterns across latent states:**
+***Emission patterns across latent states:***
 
 ![Latent state emission profiles](Time_Clusters_AD/figs/emission_states.png)
 
 
-#### Transition Dynamics and State Ordering
+**Transition Dynamics and State Ordering**
 
 Analysis of the learned transition matrix revealed meaningful differences in **state stability and progression likelihood**, distinguishing more persistent states from transitional phases.
 
@@ -113,8 +104,7 @@ A conceptual ordering of latent states was derived to support interpretation of 
 ![Conceptual ordering of latent states](Time_Clusters_AD/figs/state_movement.png)
 
 
-#### Latent State Feature Profiles
-
+**Latent State Feature Profiles**
 Inspection of feature distributions within each latent state revealed clinically interpretable patterns:
 
 - **Normal / Early Impairment (State 2):**  
@@ -134,9 +124,8 @@ Inspection of feature distributions within each latent state revealed clinically
 Together, these profiles support the **clinical plausibility** of the discovered latent structure while highlighting the contribution of non-cognitive features to disease characterization.
 
 
-#### Why This Matters
-
-This work demonstrates how **unsupervised time-series models** can move beyond static diagnostic labels to uncover progression dynamics directly from longitudinal clinical data. The approach provides a foundation for hypothesis generation, trajectory-based analysis, and future predictive extensions.
+**Why This Matters**
+This work demonstrates how unsupervised time-series models can move beyond static diagnostic labels to uncover progression dynamics directly from longitudinal clinical data. The approach provides a foundation for hypothesis generation, trajectory-based analysis, and future predictive extensions.
 
 **Final project presentation (with co-authors):**  
 https://youtu.be/yZVrWwY5-8U
@@ -145,13 +134,12 @@ https://youtu.be/yZVrWwY5-8U
 
 ### [AutoSRev — Automated Systematic Review](AutoSRev/)
 
-Systematic reviews are foundational to **evidence-based medicine**, but they are time-intensive, often requiring review of hundreds of publications and taking **3–12 months** to complete. AutoSRev is a **proof-of-concept pipeline** designed to automate key stages of the systematic review process: **article discovery, relevance classification, and structured data extraction**.
+Systematic reviews are foundational to evidence-based medicine, but they are time-intensive, often requiring review of hundreds of publications and taking 3–12 months to complete. AutoSRev is a proof-of-concept pipeline designed to automate key stages of the systematic review process: article discovery, relevance classification, and structured data extraction.
 
 The goal of this project was to evaluate **feasibility**, not full generalizability, and to demonstrate that meaningful automation is possible even with limited labeled data.
 
 
-#### Concept Overview
-
+**Concept Overview**
 AutoSRev:
 - identifies potentially relevant publications from a large corpus
 - classifies articles based on domain-specific research questions
@@ -162,23 +150,22 @@ The system was intentionally scoped to a **limited domain** to validate the appr
 ![Corpus word cloud](AutoSRev/data_vis/wordclourd.png)
 
 
-#### Preprocessing and Text Representation
-
-Full-text XML articles were parsed into **structured sections**, enabling targeted weighting of informative content. Section importance was adjusted dynamically depending on the task stage (retrieval vs extraction).
+**Preprocessing and Text Representation**
+Full-text XML articles were parsed into structured sections, enabling targeted weighting of informative content. Section importance was adjusted dynamically depending on the task stage (retrieval vs extraction).
 
 Key preprocessing steps included:
 - parsing full-text XML into standardized sections  
-- **section-weighting** to emphasize abstracts, results, or methods as appropriate  
+- section-weighting to emphasize abstracts, results, or methods as appropriate  
 - lowercasing, stemming, stopword removal, and short-token filtering  
 
-This design allowed the same corpus to support **multiple analytic objectives** without reprocessing.
+This design allowed the same corpus to support multiple analytic objectives without reprocessing.
 
 
-#### Information Retrieval and Classification
+**Information Retrieval and Classification**
 
-The pipeline began with a **TF-IDF vectorization** of the full corpus, followed by cosine similarity ranking between user queries and documents.
+The pipeline began with a TF-IDF vectorization of the full corpus, followed by cosine similarity ranking between user queries and documents.
 
-To improve robustness with a **small labeled dataset**, the system evolved from pure cosine-based retrieval to a **cosine-informed logistic regression classifier (cosineLR)**:
+To improve robustness with a small labeled dataset, the system evolved from pure cosine-based retrieval to a cosine-informed logistic regression classifier (cosineLR):
 - cosine similarity retained as an explicit feature
 - additional engineered features added for domain signal
 - improved recall for ambiguous abstracts and borderline cases
@@ -196,16 +183,15 @@ This hybrid approach preserved semantic similarity while enabling supervised lea
 ![Cross-validation metrics](AutoSRev/data_vis/cvb_metrics_sg_query8.5.v1.png)
 
 
-#### Descriptive Statistics and Data Extraction
-
-For articles predicted as relevant, a **descriptive statistics module** was applied to extract structured study-level information, including:
+**Descriptive Statistics and Data Extraction**
+For articles predicted as relevant, a descriptive statistics module was applied to extract structured study-level information, including:
 - sample size  
 - sex distribution  
 - age  
 - BMI  
 - study type  
 
-Extraction relied on **tuned regular expressions** to handle heterogeneous reporting styles. When multiple candidate values were detected, conservative defaults were applied (e.g., sample size defaulted to 1 for case studies).
+Extraction relied on tuned regular expressions to handle heterogeneous reporting styles. When multiple candidate values were detected, conservative defaults were applied (e.g., sample size defaulted to 1 for case studies).
 
 Missing values were explicitly encoded as `-9999` to preserve analytic integrity.
 
@@ -214,25 +200,22 @@ Missing values were explicitly encoded as `-9999` to preserve analytic integrity
 ![Extracted statistics table](AutoSRev/data_vis/stats_tabel.png)
 
 
-#### Domain-Specific Metrics (Prototype)
+**Domain-Specific Metrics (Prototype)**
+Certain domain-specific indicators were implemented as boolean, hardcoded parameters. While effective for the proof-of-concept, these components were intentionally flagged as limiting generalizability, highlighting areas for future refactoring or learning-based approaches.
 
-Certain domain-specific indicators were implemented as **boolean, hardcoded parameters**. While effective for the proof-of-concept, these components were intentionally flagged as **limiting generalizability**, highlighting areas for future refactoring or learning-based approaches.
 
-
-#### Outputs
-
+**Outputs**
 - structured `.csv` files containing extracted study-level data  
 - ranked article lists for flexible review depth  
 - reproducible outputs supporting auditability and downstream analysis  
 
 
-#### Core Findings
-
+**Core Findings**
 This project demonstrated that:
-- an **end-to-end automated systematic review pipeline is feasible**
+- an end-to-end automated systematic review pipeline is feasible
 - meaningful data extraction can be achieved from predicted articles
-- automation has the potential to **reduce review timelines by weeks to months**
-- standardized pipelines can **increase data integrity and reproducibility**
+- automation has the potential to reduce review timelines by weeks to months
+- standardized pipelines can increase data integrity and reproducibility
 
 While limited in scope, AutoSRev provides a strong foundation for expanding automated evidence synthesis in biomedical research.
 
@@ -244,14 +227,13 @@ While limited in scope, AutoSRev provides a strong foundation for expanding auto
 This project analyzes radiation exposure following a **simulated earthquake-related disaster** in the fictional city of *St. Himark*, using the **VAST 2019 Challenge dataset**. The goal was to support **situational awareness and decision-making** under conditions of noisy, conflicting, and heterogeneous sensor data.
 
 
-#### Data Overview
-
+**Data Overview**
 Radiation measurements were collected over a **five-day period (April 6–10)** following the event and consist of two complementary data sources:
 
-- **Mobile sensors (3.3M+ records):**  
+- *Mobile sensors (3.3M+ records):*  
   Citizen scientist devices with high spatial coverage but variable accuracy.
 
-- **Static sensors (744K records):**  
+- *Static sensors (744K records):*  
   Fixed, calibrated sensors providing more stable reference measurements.
 
 Each record included:
@@ -261,7 +243,7 @@ Each record included:
 - radiation value and units  
 - user ID  
 
-Additional **engineered features** were created, including:
+Additional engineered features were created, including:
 - hour of day  
 - date and weekday  
 - sensor type (mobile vs static)  
@@ -269,39 +251,35 @@ Additional **engineered features** were created, including:
 This allowed temporal patterns and sensor reliability differences to be explicitly examined.
 
 
-#### Analytical Objectives
-
+**Analytical Objectives**
 The analysis focused on:
-- addressing **uncertainty and disagreement** in citizen-reported measurements  
+- addressing uncertainty and disagreement in citizen-reported measurements  
 - comparing mobile and static sensor behavior  
-- identifying **troubled regions** requiring intervention  
-- examining the **spread of contamination over time**  
-- informing potential **cleanup and evacuation planning**
+- identifying troubled regions requiring intervention  
+- examining the spread of contamination over time
+- informing potential cleanup and evacuation planning
 
-Rather than treating individual measurements as ground truth, the work emphasized **aggregate behavior and consistency** across sensors and time.
+Rather than treating individual measurements as ground truth, the work emphasized aggregate behavior and consistency across sensors and time.
 
 
-#### Aggregated Trends
-
+**Aggregated Trends**
 To reconcile conflicting reports, radiation values were aggregated across time and sensor type, enabling comparison of global trends and identification of anomalous periods.
 
 ![Aggregated radiation time series](r-programming/data-visualization/earthquakes_radiation/aggregate_timeseries.png)
 
 
-#### Spatial–Temporal Visualization
-
-A central deliverable of this project was an **animated map of St. Himark**, visualizing radiation levels from both mobile and fixed sensors over time. The animation highlights:
+**Spatial–Temporal Visualization**
+A central deliverable of this project was an animated map of St. Himark, visualizing radiation levels from both mobile and fixed sensors over time. The animation highlights:
 - emerging hotspots  
 - spatial diffusion patterns  
 - differences between citizen-reported and calibrated measurements  
 
-The animation was created using **R visualization and animation libraries**, including `ggplot2` and `gganimate`.
+The animation was created using R visualization and animation libraries, including `ggplot2` and `gganimate`.
 
 ![Radiation spread over time](r-programming/data-visualization/earthquakes_radiation/radiation_animation.gif)
 
 
-#### Why This Matters
-
+**Why This Matters**
 This project demonstrates how **large-scale, noisy sensor data** can be transformed into actionable insight through thoughtful aggregation, temporal analysis, and visual storytelling. It highlights the importance of:
 - uncertainty-aware analysis  
 - combining heterogeneous data sources  
