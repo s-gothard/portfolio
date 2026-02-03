@@ -8,91 +8,64 @@ Throughout my career, I have demonstrated my ability to collaborate cross-functi
 
 ## Table of Contents
 - [Technologies](#technologies)
-- [Projects](#projects)
-  - [Python](#python)
-  - [R](#r)
-  - [Java](#java)
-  - [QGIS](#qgis)
+- [Projects Highlights](#?)
+  - [NACC Dashboards](#?)
+  - [Time Clusters D](#?)
+  - [AutoSRev](#?)
+  - [Lab Utilization Data Visualization](#?)
+  - [Earth Quake Radiation Project](#qgis)
 - [Committee Work](#committee-work)
 - [Publications](#publications)
 - [Contact](#contact)
 
 ## Technologies
-This portfolio includes projects using the following technologies:
+I Have experience with following technologies:
 - **Python**
 - **R**
 - **Java**
 - **QGIS**
+- **SQL**
+- **Tableau**
 
-## Projects
+## Project Highlights
 
-### Python
-Here are some of my Python-based projects:
+### [NACC Dashboards](nacc_dashboard/)
 
-- **A Variety of Machine Learning Skills**  
-  These include ML model examples:
-  - Decision Trees and Random Forests
-  - K-Means Clustering
-  - K-Nearest Neighbors
-  - Linear Regression
-  - Logistic Regression
-  - Natural Language Processing
-  - Neural Networks
-  - PCA
-  - SVM  
-  [View Project Folders](https://github.com/s-gothard/portfolio/tree/main/python/machine-learning)
+I developed a suite of reproducible analytics dashboards designed to support intuitive, multi-level comparison across Alzheimer’s Disease Research Centers (ADRCs), while also enabling within-site and within-subject longitudinal analysis. These dashboards were built to be **easily re-run as new data become available**, supporting ongoing monitoring rather than one-off reporting.
 
-- **Exploratory Data Analysis and Visualizations**  
-  Included in this folder are examples of exploratory data analysis and data visualizations that I have done in Python.  
-  [View EDA and Viz Projects](https://github.com/s-gothard/portfolio/tree/main/python/data-visualization)
+Key design principles:
+- enable **cross-site benchmarking** in a standardized framework
+- support **within-site comparisons** across time
+- summarize **subject-level longitudinal change**
+- ensure outputs can be **regenerated as data are refreshed**
 
-- **Software Skills**  
-  In the course of my training, I have developed data science classes and functions independent of common libraries.   
-  [Software Skill Projects]()  
+**Selected dashboard outputs:**
 
-### R
-Here are some of my R-based projects:
-
-- **Statistical Analysis Machine Learning Projects**  
-  These include ML model examples:
-  - Decision Trees and Random Forests
-  - K-Means Clustering
-  - K-Nearest Neighbors
-  - Linear Regression
-  - Logistic Regression
-  - Natural Language Processing
-  - Neural Networks
-  - PCA
-  - SVM  
-  [View Project]() 
-
-- **Data Visualization Projects**  
-  - Radiation Spread Overtime
-  - Classroom Utilization  
-  [View Project]()
+**Global MOCA vs CDR-SB correlation (all sites)**  
+Highlights cross-site consistency and heterogeneity in cognitive measure alignment, supporting assessment of comparability across centers.
   
-- **Statistical Analysis**  
-  - National Alzheimer's Coordinating Center Data Analysis  
-    [View Project]()  
-  - Wildfire Predictive Spread Analysis  
-    [View Project]() 
+![MOCA vs CDR-SB correlation heatmap across all sites](nacc_dashboard/moca_cdr_cor_all.png)
 
-### Java
-Here are some of my Java-based projects:
+**Follow-up missingness across all sites**  
+Summarizes longitudinal follow-up completeness, enabling rapid identification of sites with elevated attrition or missing data patterns.
+  
+![Follow-up missingness across sites](nacc_dashboard/flwup_missing_all.png)
 
-- **A Variety of Software Tasks**  
-  These include software engineering tasks such as:
-  - Object-Oriented Programming (OOP)
-  - Algorithms and Data Structures
-  - Multi-threading
-  - Web Development (Servlets, JSP)
-  - GUI Development (JavaFX, Swing)
-  - Unit Testing (JUnit)  
-  [View Project Folders]()  
+**Within-site CDR-SB change (initial vs most recent visit)**  
+A barbell plot for a selected site comparing subject-level baseline and most recent CDR-SB values, supporting intuitive interpretation of progression, stability, or variability over time.
+  
+![Within-site CDR-SB change over time](nacc_dashboard/cdrsum_intvrec_site.png)
 
-### QGIS
-In this section, I will showcase projects involving QGIS:
+📄 **Full dashboard report:** See the accompanying PDF in this folder for additional figures and methodological details.  
 
+### Time Cluster Analysis for Cognitive Decline (Time Clusters AD)
+s
+
+### AutoSRev
+
+### Lab Utilization Data Visualization
+
+### Earth Quake Radiation Project
 - **Geospatial Data Analysis**  
   [View Project]()  
 
