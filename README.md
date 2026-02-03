@@ -58,11 +58,12 @@ A barbell plot for a selected site comparing subject-level baseline and most rec
 
 **Full dashboard report:** See the accompanying PDF in this folder for additional figures and methodological details.  
 
+---
+
 ### [Time Clusters (AD)](Time_Clusters_AD/)
 
 This project investigates **longitudinal patterns of cognitive progression in Alzheimer’s disease** using time-aware modeling rather than visit-level prediction. The primary goal was **exploratory discovery**: identifying latent cognitive states and transition dynamics directly from real-world longitudinal clinical data.
 
----
 
 #### Data
 
@@ -77,7 +78,6 @@ Key characteristics of the dataset include:
 
 Diagnostic states were binned into clinically meaningful categories to support downstream modeling. In this phase, the focus is on **latent structure discovery**, not prediction.
 
----
 
 #### Processing Pipeline
 
@@ -91,7 +91,6 @@ The emphasis was on producing a **clean, temporally consistent representation** 
 
 ![Longitudinal processing pipeline](Time_Clusters_AD/figs/processing_pipeline.png)
 
----
 
 #### Latent State Exploration with Hidden Markov Models
 
@@ -103,7 +102,6 @@ Exploration supported a **four-state latent structure**, with each state exhibit
 
 ![Latent state emission profiles](Time_Clusters_AD/figs/emission_states.png)
 
----
 
 #### Transition Dynamics and State Ordering
 
@@ -115,7 +113,6 @@ A conceptual ordering of latent states was derived to support interpretation of 
 
 ![Conceptual ordering of latent states](Time_Clusters_AD/figs/state_movement.png)
 
----
 
 #### Latent State Feature Profiles
 
@@ -137,7 +134,6 @@ Inspection of feature distributions within each latent state revealed clinically
 
 Together, these profiles support the **clinical plausibility** of the discovered latent structure while highlighting the contribution of non-cognitive features to disease characterization.
 
----
 
 #### Why This Matters
 
@@ -146,10 +142,107 @@ This work demonstrates how **unsupervised time-series models** can move beyond s
 **Final project presentation (with co-authors):**  
 https://youtu.be/yZVrWwY5-8U
 
+---
 
-### AutoSRev
+### [AutoSRev — Automated Systematic Review](AutoSRev/)
+
+Systematic reviews are foundational to **evidence-based medicine**, but they are time-intensive, often requiring review of hundreds of publications and taking **3–12 months** to complete. AutoSRev is a **proof-of-concept pipeline** designed to automate key stages of the systematic review process: **article discovery, relevance classification, and structured data extraction**.
+
+The goal of this project was to evaluate **feasibility**, not full generalizability, and to demonstrate that meaningful automation is possible even with limited labeled data.
+
+
+#### Concept Overview
+
+AutoSRev:
+- identifies potentially relevant publications from a large corpus
+- classifies articles based on domain-specific research questions
+- extracts structured summary data to support downstream analysis
+
+The system was intentionally scoped to a **limited domain** to validate the approach before generalization.
+
+![Corpus word cloud](AutoSRev/data_vis/wordclourd.png)
+
+
+#### Preprocessing and Text Representation
+
+Full-text XML articles were parsed into **structured sections**, enabling targeted weighting of informative content. Section importance was adjusted dynamically depending on the task stage (retrieval vs extraction).
+
+Key preprocessing steps included:
+- parsing full-text XML into standardized sections  
+- **section-weighting** to emphasize abstracts, results, or methods as appropriate  
+- lowercasing, stemming, stopword removal, and short-token filtering  
+
+This design allowed the same corpus to support **multiple analytic objectives** without reprocessing.
+
+
+#### Information Retrieval and Classification
+
+The pipeline began with a **TF-IDF vectorization** of the full corpus, followed by cosine similarity ranking between user queries and documents.
+
+To improve robustness with a **small labeled dataset**, the system evolved from pure cosine-based retrieval to a **cosine-informed logistic regression classifier (cosineLR)**:
+- cosine similarity retained as an explicit feature
+- additional engineered features added for domain signal
+- improved recall for ambiguous abstracts and borderline cases
+
+This hybrid approach preserved semantic similarity while enabling supervised learning.
+
+**Confusion matrices for two target queries:**
+
+![Confusion matrix for query 1](AutoSRev/data_vis/confusion_matrixb_sg_query.png)
+
+![Confusion matrix for query 2](AutoSRev/data_vis/confusion_matrix_th_query.png)
+
+**Cross-validation performance (query 1):**
+
+![Cross-validation metrics](AutoSRev/data_vis/cvb_metrics_sg_query8.5.v1.png)
+
+
+#### Descriptive Statistics and Data Extraction
+
+For articles predicted as relevant, a **descriptive statistics module** was applied to extract structured study-level information, including:
+- sample size  
+- sex distribution  
+- age  
+- BMI  
+- study type  
+
+Extraction relied on **tuned regular expressions** to handle heterogeneous reporting styles. When multiple candidate values were detected, conservative defaults were applied (e.g., sample size defaulted to 1 for case studies).
+
+Missing values were explicitly encoded as `-9999` to preserve analytic integrity.
+
+**Example extracted statistics table:**
+
+![Extracted statistics table](AutoSRev/data_vis/stats_tabel.png)
+
+
+#### Domain-Specific Metrics (Prototype)
+
+Certain domain-specific indicators were implemented as **boolean, hardcoded parameters**. While effective for the proof-of-concept, these components were intentionally flagged as **limiting generalizability**, highlighting areas for future refactoring or learning-based approaches.
+
+
+#### Outputs
+
+- structured `.csv` files containing extracted study-level data  
+- ranked article lists for flexible review depth  
+- reproducible outputs supporting auditability and downstream analysis  
+
+
+#### Core Findings
+
+This project demonstrated that:
+- an **end-to-end automated systematic review pipeline is feasible**
+- meaningful data extraction can be achieved from predicted articles
+- automation has the potential to **reduce review timelines by weeks to months**
+- standardized pipelines can **increase data integrity and reproducibility**
+
+While limited in scope, AutoSRev provides a strong foundation for expanding automated evidence synthesis in biomedical research.
+
+
+---
 
 ### Lab Utilization Data Visualization
+
+---
 
 ### Earth Quake Radiation Project
 - **Geospatial Data Analysis**  
