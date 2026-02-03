@@ -36,19 +36,23 @@
 12. **Lindauer A, Smith S, Gothard S, Mattek N, Tran L, Mooney A.**  
     "There’s no straight line… a consumer-informed intervention for FTD family care partners: the STELLA-FTD pilot study."  
     *Aging and Mental Health*, 1-11, 2023. [DOI: 10.1080/13607863.2023.2250741](https://doi.org/10.1080/13607863.2023.2250741)
-13. **Muurling M, Au-Yeung WM, Beattie Z, Wu CY, Dodge H, Rodrigues NK, Gothard S, Silbert LC, Barnes LL, Steele JS, Kaye J.**  
+13. **Lindauer, A., Gothard, S., Bernard, H., & Steele, J. S. (2023).**
+    'Care partner burden and emergency service use: what is the link?'
+    Alzheimer’s & Dementia, 19(S19), e077671. https://doi.org/10.1002/alz.077671
+15. **Muurling M, Au-Yeung WM, Beattie Z, Wu CY, Dodge H, Rodrigues NK, Gothard S, Silbert LC, Barnes LL, Steele JS, Kaye J.**  
     "Differences in Life Space Activity Patterns Between Older Adults With Mild Cognitive Impairment Living Alone or as a Couple: Cohort Study Using Passive Activity Sensing."  
     *JMIR Aging*, 6:e45876, 2023. [DOI: 10.2196/45876](https://doi.org/10.2196/45876)
-14. **Au-Yeung WM, Liu Y, Hanna R, Gothard S, Rodrigues N, Leon Guerrero C, Beattie Z, Kaye J.**  
+16. **Au-Yeung WM, Liu Y, Hanna R, Gothard S, Rodrigues N, Leon Guerrero C, Beattie Z, Kaye J.**  
     "Feasibility of Deploying Home-Based Digital Technology, Environmental Sensors, and Web-Based Surveys for Assessing Behavioral Symptoms and Identifying Their Precipitants in Older Adults: Longitudinal, Observational Study."  
     *JMIR Form Res.*, 8:e53192, 2024. [DOI: 10.2196/53192](https://doi.org/10.2196/53192)
-15. **Au-Yeung WM, Miller L, Wu CY, Beattie Z, Nunnerley M, Hanna R, Gothard S, Wild K, Kaye J.**  
+17. **Au-Yeung WM, Miller L, Wu CY, Beattie Z, Nunnerley M, Hanna R, Gothard S, Wild K, Kaye J.**  
     "Examining the Relationships Between Indoor Environmental Quality Parameters Pertaining to Light, Noise, Temperature, and Humidity and the Behavioral and Psychological Symptoms of People Living With Dementia: Scoping Review."  
     *Interact J Med Res.*, 13:e56452, 2024. [DOI: 10.2196/56452](https://doi.org/10.2196/56452)
-16. **Dawson W, Mattek N, Gothard S, Kaye J, \& Lindauer A.** (2024)  
+18. **Dawson W, Mattek N, Gothard S, Kaye J, \& Lindauer A.** (2024)  
     "Ascertaining Out-of-Pocket Costs of Dementia Care: Feasibility Study of a Web-Based Weekly Survey."  
     *JMIR Formative Research*, 8, e56878. [DOI: 10.2196/56878](https://doi.org/10.2196/56878)
-17. **Biber, S., Gothard, S., Das, S.** 
+19. **Biber, S., Gothard, S., Das, S.**
+    Alzheimer’s \& Dementia (ALZ71105). “A cross-consortium, stakeholder-driven model for implementing a modern electronic data capture and submission systems
+    across the Alzheimer’s Disease Research Centers Program.”
 
-&nbsp;   Alzheimer’s \& Dementia (ALZ71105). “A cross-consortium, stakeholder-driven model for implementing a modern electronic data capture and submission system across the Alzheimer’s Disease Research Centers Program.”
 
