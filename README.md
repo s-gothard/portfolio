@@ -58,8 +58,94 @@ A barbell plot for a selected site comparing subject-level baseline and most rec
 
 **Full dashboard report:** See the accompanying PDF in this folder for additional figures and methodological details.  
 
-### Time Cluster Analysis for Cognitive Decline (Time Clusters AD)
-s
+### [Time Clusters (AD)](Time_Clusters_AD/)
+
+This project investigates **longitudinal patterns of cognitive progression in Alzheimer’s disease** using time-aware modeling rather than visit-level prediction. The primary goal was **exploratory discovery**: identifying latent cognitive states and transition dynamics directly from real-world longitudinal clinical data.
+
+---
+
+#### Data
+
+The analysis uses the **longitudinal National Alzheimer’s Coordinating Center (NACC) Uniform Data Set (UDS)**, a geographically diverse cohort spanning approximately **2005–2025**.
+
+Key characteristics of the dataset include:
+- **54,000+ subjects** with repeated clinical visits  
+- An average of **~3.7 years of follow-up per subject**  
+- **1,000+ variables** capturing cognitive, functional, and clinical information  
+- **200,000+ total observations** across all visits  
+- Roughly **balanced representation of cognitively normal and impaired subjects**
+
+Diagnostic states were binned into clinically meaningful categories to support downstream modeling. In this phase, the focus is on **latent structure discovery**, not prediction.
+
+---
+
+#### Processing Pipeline
+
+A substantial preprocessing pipeline was developed to prepare the data for longitudinal sequence modeling, including:
+- cleaning of placeholder values and invalid entries  
+- handling of longitudinal missingness patterns  
+- feature construction for cognitive status and temporal structure  
+- exclusion of variables that would trivially encode diagnosis  
+
+The emphasis was on producing a **clean, temporally consistent representation** suitable for unsupervised modeling.
+
+![Longitudinal processing pipeline](Time_Clusters_AD/figs/processing_pipeline.png)
+
+---
+
+#### Latent State Exploration with Hidden Markov Models
+
+An unsupervised **Hidden Markov Model (HMM)** was used to infer latent cognitive states underlying observed clinical measures. The objective was not classification accuracy, but **structure discovery**: uncovering progression stages and transition behavior implicit in longitudinal data.
+
+Exploration supported a **four-state latent structure**, with each state exhibiting distinct emission profiles and temporal dynamics.
+
+**Emission patterns across latent states:**
+
+![Latent state emission profiles](Time_Clusters_AD/figs/emission_states.png)
+
+---
+
+#### Transition Dynamics and State Ordering
+
+Analysis of the learned transition matrix revealed meaningful differences in **state stability and progression likelihood**, distinguishing more persistent states from transitional phases.
+
+![Latent state transition matrix](Time_Clusters_AD/figs/transition_matrix.png)
+
+A conceptual ordering of latent states was derived to support interpretation of progression dynamics over time.
+
+![Conceptual ordering of latent states](Time_Clusters_AD/figs/state_movement.png)
+
+---
+
+#### Latent State Feature Profiles
+
+Inspection of feature distributions within each latent state revealed clinically interpretable patterns:
+
+- **Normal / Early Impairment (State 2):**  
+  Low cardiovascular markers and generally healthy cognitive and functional baselines.
+
+- **Mild Impairment (State 3):**  
+  Subtle declines in cognition accompanied by early changes in cardiovascular health, consistent with a transitional stage.
+
+- **Moderate Impairment (State 0):**  
+  Increased cardiovascular signals, emerging functional limitations, and distinct declines in cognitive measures.
+
+- **Severe Impairment (State 1):**  
+  The largest deviations from population means across multiple features, reflecting widespread impairment.
+
+![Feature profiles for normal/early state](Time_Clusters_AD/figs/normal_features.png)
+
+Together, these profiles support the **clinical plausibility** of the discovered latent structure while highlighting the contribution of non-cognitive features to disease characterization.
+
+---
+
+#### Why This Matters
+
+This work demonstrates how **unsupervised time-series models** can move beyond static diagnostic labels to uncover progression dynamics directly from longitudinal clinical data. The approach provides a foundation for hypothesis generation, trajectory-based analysis, and future predictive extensions.
+
+**Final project presentation (with co-authors):**  
+https://youtu.be/yZVrWwY5-8U
+
 
 ### AutoSRev
 
