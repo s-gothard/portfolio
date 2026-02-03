@@ -8,12 +8,12 @@ Throughout my career, I have demonstrated my ability to collaborate cross-functi
 
 ## Table of Contents
 - [Technologies](#technologies)
-- [Projects Highlights](#?)
-  - [NACC Dashboards](#?)
-  - [Time Clusters D](#?)
-  - [AutoSRev](#?)
-  - [Lab Utilization Data Visualization](#?)
-  - [Earth Quake Radiation Project](#qgis)
+- [Project Highlights](#project-highlights)
+  - [NACC Dashboards](#nacc-dashboards)
+  - [Time Clusters (AD)](#time-clusters-ad)
+  - [AutoSRev](#autosrev)
+  - [Lab Utilization Data Visualization](#lab-utilization-data-visualization)
+  - [Earthquake Radiation Project](#earthquake-radiation-project)
 - [Committee Work](#committee-work)
 - [Publications](#publications)
 - [Contact](#contact)
@@ -56,7 +56,7 @@ A barbell plot for a selected site comparing subject-level baseline and most rec
   
 ![Within-site CDR-SB change over time](nacc_dashboard/cdrsum_intvrec_site.png)
 
-📄 **Full dashboard report:** See the accompanying PDF in this folder for additional figures and methodological details.  
+**Full dashboard report:** See the accompanying PDF in this folder for additional figures and methodological details.  
 
 ### Time Cluster Analysis for Cognitive Decline (Time Clusters AD)
 s
