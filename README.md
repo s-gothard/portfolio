@@ -33,7 +33,7 @@ pandas, numpy, scikit-learn, statsmodels, PyTorch, TensorFlow, Hugging Face Tran
 *R:*  
 tidyverse, Shiny, caret, glmnet, randomForest, gbm, rpart, MASS, car, boot, pROC, ROCR, mice, janitor, skimr, lubridate, knitr, broom, plotly, ggridges gganimate
 
-**Tools & Platforms**
+**Tools & Platforms**  
 AWS (SageMaker), Docker, Tableau, Anaconda  
 RStudio, Spyder, Jupyter Notebook, Google Colab
 
