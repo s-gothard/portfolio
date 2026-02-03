@@ -1,10 +1,10 @@
 # Welcome to My GitHub Portfolio
+I am a data analyst and systems builder specializing in the **modernization of healthcare and clinical research infrastructure**. My work focuses on designing and implementing end-to-end analytic systems that transform complex, high-frequency clinical, sensor, and survey data into automated reporting, scalable analytics, and operational visibility, improving research execution and decision-making at scale.
 
-I am a passionate and results-driven Data Scientist and Analyst with a strong foundation in data management, statistical analysis, and machine learning. I have a Master's Degree in Data Science and a Graduate Certificate in Biostatistics. My academic background in research has provided me with a solid understanding of data science principles, while my hands-on experience in analyzing complex datasets, developing models, and creating actionable insights has honed my ability to solve real-world problems.
+I bring a strong foundation in data management, biostatistics, and machine learning, with a Master’s degree in Data Science and a Graduate Certificate in Biostatistics. Across my work, I have contributed to population-level analyses informing study design and sample size estimation, authored and supported data management and modernization plans, and helped develop novel analytic frameworks for large, multi-site research organizations.
 
-With expertise in Python, R, and other analytical tools, I have worked on a wide range of projects, from exploratory data analysis (EDA) and data visualization to machine learning applications. I have a proven track record of applying advanced algorithms and statistical models to generate meaningful insights, drive decision-making, and deliver impactful results for various stakeholders.
+I am a national contributor to data standards and best practices, with an emphasis on feature discovery, reproducibility, and interpretable modeling. This portfolio highlights selected projects that demonstrate my approach to longitudinal analysis, automated evidence synthesis, uncertainty-aware visualization, and research data system design.
 
-Throughout my career, I have demonstrated my ability to collaborate cross-functionally, manage large datasets, and communicate technical concepts to both technical and non-technical audiences. My dedication to continuous learning and my commitment to staying at the forefront of emerging technologies in data science ensures that I bring innovative solutions to every project I tackle.
 
 ## Table of Contents
 - [Technologies](#technologies)
@@ -18,13 +18,35 @@ Throughout my career, I have demonstrated my ability to collaborate cross-functi
 - [Contact](#contact)
 
 ## Technologies
-I have intermediate experience with following technologies:
-- **Python**
-- **R**
-- **SQL**
-- **Java**
-- **QGIS**
-- **Tableau**
+
+Core technologies and methods used across projects in this portfolio:
+
+**Languages**
+Python, R, SQL
+
+**Libraries & Frameworks**
+
+*Python*
+pandas, numpy, scikit-learn, statsmodels, PyTorch, TensorFlow, Hugging Face Transformers, nltk, matplotlib, seaborn
+
+*R*  
+tidyverse, Shiny, caret, glmnet, randomForest, gbm, rpart, MASS, car, boot, pROC, ROCR, mice, janitor, skimr, lubridate, knitr, broom, plotly, ggridges gganimate
+
+**Tools & Platforms**
+AWS (SageMaker), Docker, Tableau, Anaconda  
+RStudio, Spyder, Jupyter Notebook, Google Colab
+
+**Analytical & Machine Learning Techniques**
+- Statistical modeling, including generalized linear and mixed-effects models  
+- Time-series analysis  
+- Clustering and longitudinal trajectory modeling  
+- Ensemble tree methods (random forests, gradient boosting)  
+- Support vector machines (SVM)  
+- Convolutional neural networks (CNNs)  
+- Transformer-based NLP models (e.g., BERT)  
+- Natural language processing (TF-IDF, cosine similarity)  
+- API-based data ingestion and automated data pipelines
+
 
 ## Project Highlights
 
