@@ -12,7 +12,6 @@ Throughout my career, I have demonstrated my ability to collaborate cross-functi
   - [NACC Dashboards](#nacc-dashboards)
   - [Time Clusters (AD)](#time-clusters-ad)
   - [AutoSRev](#autosrev)
-  - [Lab Utilization Data Visualization](#lab-utilization-data-visualization)
   - [Earthquake Radiation Project](#earthquake-radiation-project)
 - [Committee Work](#committee-work)
 - [Publications](#publications)
@@ -22,9 +21,9 @@ Throughout my career, I have demonstrated my ability to collaborate cross-functi
 I Have experience with following technologies:
 - **Python**
 - **R**
+- **SQL**
 - **Java**
 - **QGIS**
-- **SQL**
 - **Tableau**
 
 ## Project Highlights
@@ -240,21 +239,89 @@ While limited in scope, AutoSRev provides a strong foundation for expanding auto
 
 ---
 
-### Lab Utilization Data Visualization
+### [Earthquake Radiation Analysis](r-programming/data-visualization/earthquakes_radiation/)
 
+This project analyzes radiation exposure following a **simulated earthquake-related disaster** in the fictional city of *St. Himark*, using the **VAST 2019 Challenge dataset**. The goal was to support **situational awareness and decision-making** under conditions of noisy, conflicting, and heterogeneous sensor data.
+
+
+#### Data Overview
+
+Radiation measurements were collected over a **five-day period (April 6–10)** following the event and consist of two complementary data sources:
+
+- **Mobile sensors (3.3M+ records):**  
+  Citizen scientist devices with high spatial coverage but variable accuracy.
+
+- **Static sensors (744K records):**  
+  Fixed, calibrated sensors providing more stable reference measurements.
+
+Each record included:
+- timestamp  
+- sensor ID  
+- longitude and latitude  
+- radiation value and units  
+- user ID  
+
+Additional **engineered features** were created, including:
+- hour of day  
+- date and weekday  
+- sensor type (mobile vs static)  
+
+This allowed temporal patterns and sensor reliability differences to be explicitly examined.
+
+
+#### Analytical Objectives
+
+The analysis focused on:
+- addressing **uncertainty and disagreement** in citizen-reported measurements  
+- comparing mobile and static sensor behavior  
+- identifying **troubled regions** requiring intervention  
+- examining the **spread of contamination over time**  
+- informing potential **cleanup and evacuation planning**
+
+Rather than treating individual measurements as ground truth, the work emphasized **aggregate behavior and consistency** across sensors and time.
+
+
+#### Aggregated Trends
+
+To reconcile conflicting reports, radiation values were aggregated across time and sensor type, enabling comparison of global trends and identification of anomalous periods.
+
+![Aggregated radiation time series](r-programming/data-visualization/earthquakes_radiation/aggregate_timeseries.png)
+
+
+#### Spatial–Temporal Visualization
+
+A central deliverable of this project was an **animated map of St. Himark**, visualizing radiation levels from both mobile and fixed sensors over time. The animation highlights:
+- emerging hotspots  
+- spatial diffusion patterns  
+- differences between citizen-reported and calibrated measurements  
+
+The animation was created using **R visualization and animation libraries**, including `ggplot2` and `gganimate`.
+
+![Radiation spread over time](r-programming/data-visualization/earthquakes_radiation/radiation_animation.gif)
+
+
+#### Why This Matters
+
+This project demonstrates how **large-scale, noisy sensor data** can be transformed into actionable insight through thoughtful aggregation, temporal analysis, and visual storytelling. It highlights the importance of:
+- uncertainty-aware analysis  
+- combining heterogeneous data sources  
+- communicating complex dynamics clearly to support rapid decision-making
+
+The resulting visualizations are designed to support emergency response, environmental monitoring, and public safety planning in data-limited, high-stakes contexts.
+ 
 ---
-
-### Earth Quake Radiation Project
-- **Geospatial Data Analysis**  
-  [View Project]()  
 
 ## Committee Work
 Between 2022 and 2024, I worked as a co-chair and leader on the Electronic Data Capture NACC committees. In this role, I helped develop NIH data management plans, psychometric data capture standardization, and data best practices. I worked and led 3 committees over the two years and am incredibly proud of the deliverables we created for our research community.
 
   - [Link to Committee Website](https://naccdata.org/nacc-collaborations/uds4-updates#collaborations)
 
+---
+
 ## Publications
 I have published several works in academic journals and conferences. For a full list of my publications, please refer to the [publications list](https://github.com/s-gothard/portfolio/blob/main/Publications/Publications.md).
+
+---
 
 ## Contact
 Feel free to reach out if you have any questions or would like to discuss collaboration opportunities!
@@ -262,6 +329,4 @@ Feel free to reach out if you have any questions or would like to discuss collab
 - **Email**: [tyle1239@gmail.com](mailto:tyle1239@gmail.com)
 - **LinkedIn**: [My LinkedIn Profile](https://www.linkedin.com/in/sarah-gothard-8972a8124/)
 
----
 
-Thank you for checking out my portfolio!
